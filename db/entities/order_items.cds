@@ -25,6 +25,8 @@ entity OrderItems : cuid, managed {
     storageLocation           : po.storageLocation;
     deletionIndicator         : po.Tech_Boolean default false;
     text                      : po.description;
+    accounts                  : Composition of many po.Accounts
+                                    on accounts.parent = $self;
 }
 
 annotate OrderItems with {

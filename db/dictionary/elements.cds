@@ -17,6 +17,12 @@ type materialGroup             : String(9);
 type plant                     : String(4);
 type storageLocation           : String(4);
 
+type unloadingPoint            : String(25);
+type goodsRecipient            : String(12);
+type GLAccountNo               : String(10);
+type costCenter                : String(10);
+type functionalArea            : String(16);
+
 //Numerical variables
 type stock       : Decimal(13, 3);
 type price       : Decimal(11, 2);
