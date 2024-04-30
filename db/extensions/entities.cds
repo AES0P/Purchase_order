@@ -5,3 +5,7 @@ extend po.Orders with {
     virtual statusIcon : Integer;
     isEditable         : po.Tech_Boolean not null default true @Core.Computed;
 }
+
+extend po.OrderItems with {
+    virtual stockIcon : Integer;
+}

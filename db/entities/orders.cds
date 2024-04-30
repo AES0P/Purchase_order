@@ -19,6 +19,8 @@ entity Orders : cuid, managed {
     note          : po.description;
     totalStock    : po.stock;
     totalNetPrice : po.price;
+    items         : Composition of many po.OrderItems
+                        on items.parent = $self;
 }
 
 // input validation
