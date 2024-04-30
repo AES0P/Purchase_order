@@ -1,4 +1,4 @@
-﻿ID;parent_ID;orderItemNo;accountAssignmentCategory;itemCategory;materialNo;materialDescr;deliveryDateCategory;stock;deliveryDate;netPrice;materialGroup;plant;storageLocation;deletionIndicator;text
+﻿ID;parent_ID;orderItemNo;accountAssignmentCategory;itemCategory;materialNo;materialDescr;deliveryDateCategory;stock;deliveryDate;netPrice;materialGroup;plant_plant;storageLocation_storageLocation;deletionIndicator;text
 450000000410;4500000004;10;K;A;;测试服务;T;0.000;2021-05-18;"10000.00";P001;P001;;;测试服务
 450000002910;4500000029;10;F;0;SF-FL-CWEIGHT;叉车配重盘;T;10;2021-07-28;110.00;L003;1710;171B;;叉车配重盘
 450000003110;4500000031;10;K;0;;eeqqeqweq;T;1;2021-07-28;2.00;D010;P001;;;eeqqeqweq

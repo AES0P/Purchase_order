@@ -1,4 +1,4 @@
-ID;orderNo;vendor;purchOrg;purchGroup;companyCode;currency_code;text;note;totalStock;totalNetPrice;status_code
+ID;orderNo;vendor_vendor;purchOrg_purchOrg;purchGroup_purchGroup;companyCode_companyCode;currency_code;text;note;totalStock;totalNetPrice;status_code
 4500000004;4500000004;S001;D001;001;C001;USD;;Standard PO;;;Y
 4500000029;4500000029;10002;1710;001;1710;USD;;Standard PO;;;Y
 4500000031;4500000031;8888;D001;005;C001;CNY;;Standard PO;;;Y

@@ -1,0 +1,32 @@
+﻿companyCode,name,city,country,currency,language,charOfAccts
+1000,,,,,,
+1080,陕西测试有限公司,陕西省西安市,CN,CNY,ZH,
+1233,ddf,,,AFN,,
+1710,Company Code 1710,Palo Alto,US,USD,EN,YCOA
+2000,,,,,,
+2001,广东省肇庆市测试有限公司,广州市,CN,CNY,ZH,1000
+2021,Company Code 1710,Palo Alto,US,CNY,EN,YCOA
+2A01,Test株式会社,東京都,JP,JPY,JA,2A01
+3000,信贷测试,上海,CN,CNY,ZH,
+4000,,,,,,
+5000,,,,,,
+6010,上海新公司,上海,CN,CNY,ZH,6010
+6020,6020公司代码,上海,CN,CNY,ZH,6020
+8000,Company Code 8000,shanghai,CN,CNY,ZH,
+9999,测试公司2,威海,CN,CNY,ZH,
+AA00,H CHINA,,CN,CNY,ZH,H000
+C001,常规测试公司,中国,CN,CNY,ZH,YCOA
+C100,北京测试公司,,CN,CNY,,
+C750,国家测试公司,北京,CN,CNY,ZH,YCOA
+CN01,国内公司代码,上海市,CN,CNY,ZH,
+F110,F110公司,中国,CN,CNY,ZH,YCOA
+HH00,H T&D SYSTEM Asia,,SG,SGD,EN,H000
+LN01,LN01 COMPANY,東京都,JP,JPY,JA,YCOA
+NL01,NL01 COMPANY,東京都,JP,JPY,JA,NL00
+SNOW,test公司,上海市徐汇区中山西路宜山路,CN,CNY,ZH,
+T001,测试sd,,,CNY,,
+ZZCZ,H CZ,,CZ,CZK,EN,H000
+ZZFR,H FR,,FR,EUR,EN,H000
+ZZJX,小金库,SH,CN,CNY,ZH,
+ZZTR,H TR,,TR,TRY,EN,H000
+ZZVN,H VN,,VN,VND,EN,H000

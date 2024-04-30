@@ -1,0 +1,67 @@
+﻿plant,storageLocation,descr
+1710,1710,TEST
+1710,171A,Std. storage 1
+1710,171B,Std. storage 2
+1710,171C,Raw Materials
+1710,171D,EWM Rec. on Dock
+1710,171E,KANBAN
+1710,171F,Residual SLoc
+1710,171Q,Main Tank
+1710,171R,Returns
+1710,171S,EWM Av. for Sale
+1710,171T,Day Tank
+1710,176S,Warehouse
+1710,F003,供应商在途仓
+1710,HHT1,NM库存地点1
+1711,1710,TEST
+1711,1711,原材料仓
+1711,171A,Std. storage 1
+1711,171B,Std. storage 2
+1711,171C,Raw Materials
+1711,171D,EWM Rec. on Dock
+1711,171E,KANBAN
+1711,171F,Residual SLoc
+1711,171Q,Main Tank
+1711,171R,Returns
+1711,171S,EWM Av. for Sale
+1711,171T,Day Tank
+1711,176S,Warehouse
+1711,F003,供应商寄售仓
+1711,HHT1,NM库存地点1
+1711,Z011,原材料仓2
+1720,1710,TEST
+1720,171A,Std. storage 1
+1720,171B,Std. storage 2
+1720,171C,Raw Materials
+1720,171D,EWM Rec. on Dock
+1720,171E,KANBAN
+1720,171F,Residual SLoc
+1720,171Q,Main Tank
+1720,171R,Returns
+1720,171S,EWM Av. for Sale
+1720,171T,Day Tank
+1720,176S,Warehouse
+1720,HHT1,NM库存地点1
+2021,171A,Std. storage 1
+2021,171B,Std. storage 2
+2021,171C,Raw Materials
+2021,171D,EWM Rec. on Dock
+2021,171E,KANBAN
+2021,171F,Residual SLoc
+2021,171Q,Main Tank
+2021,171R,Returns
+2021,171S,EWM Av. for Sale
+2021,171T,Day Tank
+2021,176S,Warehouse
+C100,1000,原材料仓
+C100,2000,半成品仓
+C100,3000,成品仓
+CN01,1000,原材料仓
+CN01,2000,半成品仓
+CN01,3000,成品仓
+JL01,JL01,test001
+LN01,LN01,LN保管場所
+NL01,NL01,NL01保管場所
+P001,D001,二级单位总库
+P001,D002,三级单位库
+P001,D003,车间库

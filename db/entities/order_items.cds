@@ -21,8 +21,8 @@ entity OrderItems : cuid, managed {
     netPrice                  : po.price;
     // priceUnit                 : String;
     materialGroup             : po.materialGroup;
-    plant                     : po.plant;
-    storageLocation           : po.storageLocation;
+    plant                     : Association to po.Plants;
+    storageLocation           : Association to po.StorageLocations;
     deletionIndicator         : po.Tech_Boolean default false;
     text                      : po.description;
     accounts                  : Composition of many po.Accounts

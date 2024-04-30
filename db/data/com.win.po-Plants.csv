@@ -1,0 +1,15 @@
+﻿plant,name1,valuationArea,supplierNumber,factoryCalendar,name2,streetAndHouseNumber,purchOrganization,salesOrganization,countryKey,region,address,planningPlant,taxJurisdiction,distribChannel,intCoBillingDiv
+1080,表面技术管理工厂,,,,,陕西省西安市随机测试工厂2,,,CN,,29396,,,,
+1710,BP美国工厂,1710,BP1710,US,Plant 1 US,3475 Dear Creek,1710,1710,US,CA,23609,1710,7700000000,10,00
+1711,BP美国工厂,,,US,Plant 1 US,3475 Dear Creek,,,US,CA,29357,,7700000000,,
+1720,无价值工厂,1720,,US,Plant 1 US,3475 Dear Creek,1710,1710,US,CA,26929,1710,7700000000,10,00
+2021,TEST DM,2021,,US,TEST DM,Dear Creek 3475,1710,1710,US,CA,24005,1710,7700000000,10,00
+4000,IDOC测试1,,,,IDOC测试2,,,,CN,,24495,,,,
+C100,工厂C100,C100,,,,2077号 丰台区小红门路,,,CN,BJ,23931,,,,
+CN01,国内工厂CN01,CN01,,,,2077号 长宁区北京路,,,CN,SH,29342,,,,
+JL01,TEST JL,,,US,TEST JL,3475 Dear Creek,,,US,CA,25096,,7700000000,,
+JX01,36164 JX 工厂01,,,CN,JX工厂01,,,,CN,,29350,,,,
+LN01,LNララント,,,,,,,,JP,,27094,,,,
+NL01,NL01プラント,NL01,,,,,NL01,,JP,,29241,,,,
+P001,常规电工厂,P001,,US,常规电工厂,四川广西,D001,,CN,BJ,23833,P001,,,
+Z001,TEST Z001,Z001,,,Z001,,,,US,,29360,,,,
