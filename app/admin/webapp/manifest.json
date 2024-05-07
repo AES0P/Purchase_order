@@ -64,6 +64,11 @@
                     "pattern": ":?query:",
                     "name": "PoList",
                     "target": "PoList"
+                },
+                {
+                    "pattern": "Orders({key}):?query:",
+                    "name": "OrderDetails",
+                    "target": "OrderDetails"
                 }
             ],
             "targets": {
@@ -74,7 +79,13 @@
                     "options": {
                         "settings": {
                             "entitySet": "Orders",
-                            "navigation": {},
+                            "navigation": {
+                                "Orders": {
+                                    "detail": {
+                                        "route": "OrderDetails"
+                                    }
+                                }
+                            },
                             "content": {
                                 "header": {
                                     "actions": {}
@@ -85,6 +96,53 @@
                                 "@com.sap.vocabularies.UI.v1.LineItem": {
                                     "tableSettings": {
                                         "selectAll": false,
+                                        "selectionMode": "Multi"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "OrderDetails": {
+                    "type": "Component",
+                    "id": "OrderDetails",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "contextPath": "/Orders",
+                            "navigation": {
+                                "items": {
+                                    "detail": {
+                                        "route": "Orders_itemsObjectPage"
+                                    }
+                                }
+                            },
+                            "content": {
+                                "header": {
+                                    "anchorBarVisible": true
+                                }
+                            },
+                            "editableHeaderContent": false,
+                            "sectionLayout": "Page",
+                            "controlConfiguration": {
+                                "items/@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "tableSettings": {
+                                        "type": "GridTable",
+                                        "creationMode": {
+                                            "createAtEnd": true,
+                                            "name": "Inline"
+                                        }
+                                    }
+                                },
+                                "attachments/@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "tableSettings": {
+                                        "type": "GridTable",
+                                        "creationMode": {
+                                            "createAtEnd": true,
+                                            "name": "Inline",
+                                            "inlineCreationRowsHiddenInEditMode": true
+                                        },
+                                        "selectAll": true,
                                         "selectionMode": "Multi"
                                     }
                                 }

@@ -90,3 +90,194 @@ annotate AdminService.Orders with @(
     }
 
 );
+
+
+annotate AdminService.OrderItems with @(
+    UI    : {
+        HeaderInfo         : {
+            TypeName      : '{i18n>ItemTitle}',
+            TypeNamePlural: '{i18n>ItemInfo}',
+        },
+        PresentationVariant: {
+            $Type    : 'UI.PresentationVariantType',
+            SortOrder: [{
+                $Type     : 'Common.SortOrderType',
+                Property  : orderItemNo,
+                Descending: false
+            }]
+        },
+        LineItem           : [
+            {
+                $Type             : 'UI.DataField',
+                Value             : orderItemNo,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '6em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : accountAssignmentCategory,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '6em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : itemCategory,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '6em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : materialNo,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '12em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : materialDescr,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '15em'}
+            },
+            // {
+            //     $Type              : 'UI.DataField',
+            //     Value              : unit,
+            //     @UI.Importance     : #High,
+            //     @HTML5.CssDefaults : {width : '9em'}
+            // },
+
+            {
+                $Type             : 'UI.DataField',
+                Value             : deliveryDateCategory,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '6em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : deliveryDate,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '9em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : stock,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '10em'},
+                Criticality       : stockIcon
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : netPrice,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '12em'}
+            },
+            // {
+            //     $Type              : 'UI.DataField',
+            //     Value              : priceUnit,
+            //     @UI.Importance     : #High,
+            //     @HTML5.CssDefaults : {width : '10em'}
+            // },
+            {
+                $Type             : 'UI.DataField',
+                Value             : materialGroup,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '10em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : plant_plant,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '10em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : storageLocation_storageLocation,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '12em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : text,
+                @UI.Importance    : #High,
+                @HTML5.CssDefaults: {width: '30em'}
+            }
+        ]
+    },
+    Common: {SideEffects #stockChanged: {
+        SourceProperties: [stock],
+        TargetProperties: [
+            'netPrice',
+            'stockIcon'
+        ]
+    }}
+);
+
+annotate AdminService.Attachments with @(
+    UI    : {
+        HeaderInfo         : {
+            TypeName      : '{i18n>Attachments}',
+            TypeNamePlural: '{i18n>Attachments}',
+        },
+        PresentationVariant: {
+            $Type    : 'UI.PresentationVariantType',
+            SortOrder: [{
+                $Type     : 'Common.SortOrderType',
+                Property  : fileName,
+                Descending: false
+            }]
+        },
+        LineItem           : [
+            {
+                $Type             : 'UI.DataField',
+                Value             : data,
+                @UI.Importance    : #High,
+                Label             : '{i18n>File}',
+                @HTML5.CssDefaults: {width: '30em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : fileType,
+                @UI.Importance    : #High,
+                Label             : '{i18n>FileType}',
+                @HTML5.CssDefaults: {width: '8em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : fileName,
+                @UI.Importance    : #High,
+                Label             : '{i18n>FileName}',
+                @HTML5.CssDefaults: {width: '15em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : createdAt,
+                Label             : '{i18n>Createdat}',
+                @HTML5.CssDefaults: {width: '15em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : createdBy,
+                Label             : '{i18n>Createdby}',
+                @HTML5.CssDefaults: {width: '12em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : modifiedAt,
+                Label             : '{i18n>Modifiedat}',
+                @HTML5.CssDefaults: {width: '15em'}
+            },
+            {
+                $Type             : 'UI.DataField',
+                Value             : modifiedBy,
+                Label             : '{i18n>Modifiedby}',
+                @HTML5.CssDefaults: {width: '12em'}
+            }
+        ]
+    },
+    Common: {SideEffects #FileUploaded: {
+        SourceProperties: [data],
+        TargetProperties: [
+            'data',
+            'fileType',
+            'fileName'
+        ]
+    }}
+);

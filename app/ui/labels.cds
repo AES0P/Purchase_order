@@ -14,6 +14,25 @@ annotate AdminService.Orders with @title: '{i18n>Orders}' {
     status        @Common.Label         : '{i18n>Status}'       @Common.Text: status.name  @Common.TextArrangement: #TextOnly;
 };
 
+annotate AdminService.OrderItems with @title: '{i18n>OrderItems}' {
+    orderItemNo               @Common.Label : '{i18n>OrderItemNo}';
+    accountAssignmentCategory @Common.Label : '{i18n>AccountAssignmentCategory}';
+    itemCategory              @Common.Label : '{i18n>ItemCategory}';
+    materialNo                @Common.Label : '{i18n>MaterialNo}';
+    materialDescr             @Common.Label : '{i18n>MaterialDescr}';
+    // unit    @Common.Label              : '{i18n>Unit}';
+    deliveryDateCategory      @Common.Label : '{i18n>DeliveryDateCategory}';
+    stock                     @Common.Label : '{i18n>Stock}';
+    deliveryDate              @Common.Label : '{i18n>DeliveryDate}';
+    netPrice                  @Common.Label : '{i18n>NetPrice}';
+    // priceUnit                @Common.Label  : '{i18n>PriceUnit}';
+    materialGroup             @Common.Label : '{i18n>MaterialGroup}';
+    plant                     @Common.Label : '{i18n>Plant}'            @Common.Text: plant.name1;
+    storageLocation           @Common.Label : '{i18n>StorageLocation}'  @Common.Text: storageLocation.descr;
+    deletionIndicator         @Common.Label : '{i18n>DeletionIndicator}';
+    text                      @Common.Label : '{i18n>Text}';
+};
+
 annotate AdminService.status with {
     code  @Common.Text: name  @Common.TextArrangement: #TextOnly;
 }
@@ -55,4 +74,29 @@ annotate AdminService.PurchasingGroups with {
     outputDevice @Common.Label: '{i18n>OutputDevice}';
     faxNo        @Common.Label: '{i18n>FaxNo}';
     eMail        @Common.Label: '{i18n>EMail}';
+}
+
+
+annotate AdminService.Plants with {
+    plant             @Common.Label: '{i18n>Plant}';
+    name1             @Common.Label: '{i18n>Name1}';
+    valuationArea     @Common.Label: '{i18n>ValuationArea}';
+    supplierNumber    @Common.Label: '{i18n>SupplierNumber}';
+    factoryCalendar   @Common.Label: '{i18n>FactoryCalendar}';
+    name2             @Common.Label: '{i18n>Name2}';
+    purchOrganization @Common.Label: '{i18n>PurchOrganization}';
+    salesOrganization @Common.Label: '{i18n>SalesOrganization}';
+    countryKey        @Common.Label: '{i18n>CountryKey}';
+    region            @Common.Label: '{i18n>Region}';
+    address           @Common.Label: '{i18n>Address}';
+    planningPlant     @Common.Label: '{i18n>[lanningPlant}';
+    taxJurisdiction   @Common.Label: '{i18n>TaxJurisdiction}';
+    distribChannel    @Common.Label: '{i18n>DistribChannel}';
+    intCoBillingDiv   @Common.Label: '{i18n>IntCoBillingDiv}';
+}
+
+annotate AdminService.StorageLocations with {
+    plant           @Common.Label: '{i18n>Plant}';
+    storageLocation @Common.Label: '{i18n>StorageLocation}';
+    descr           @Common.Label: '{i18n>Descr}';
 }

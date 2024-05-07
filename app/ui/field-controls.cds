@@ -9,3 +9,11 @@ annotate AdminService.Orders with {
     note        @UI.MultiLineText   : true;
     currency    @Common.FieldControl: #ReadOnly;
 };
+
+
+annotate AdminService.Attachments with {
+    ID        @UI.Hidden  @UI.HiddenFilter;
+    order     @UI.Hidden  @UI.HiddenFilter;
+    fileName  @UI.Hidden  @UI.HiddenFilter;
+    fileType  @UI.Hidden  @UI.HiddenFilter;
+};

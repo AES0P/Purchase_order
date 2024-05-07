@@ -240,3 +240,124 @@ annotate AdminService.Orders with @(
         }, ],
     }
 );
+
+annotate AdminService.OrderItems with {
+    plant           @(
+        Common.ValueList               : {
+            $Type                       : 'Common.ValueListType',
+            CollectionPath              : 'Plants',
+            Label                       : '{i18n>Plants}',
+            PresentationVariantQualifier: 'vh_Orders_plant',
+            Parameters                  : [
+                {
+                    $Type            : 'Common.ValueListParameterInOut',
+                    ValueListProperty: 'plant',
+                    LocalDataProperty: 'plant_plant', // local data property is the foreign key
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'name1'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'valuationArea'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'supplierNumber'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'factoryCalendar'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'name2'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'purchOrganization'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'salesOrganization'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'countryKey'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'region'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'address'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'planningPlant'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'taxJurisdiction'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'distribChannel'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'intCoBillingDiv'
+                }
+            ]
+        },
+        Common.ValueListWithFixedValues: false
+    );
+
+    storageLocation @(
+        Common.ValueList               : {
+            $Type                       : 'Common.ValueListType',
+            CollectionPath              : 'StorageLocations',
+            Label                       : '{i18n>StorageLocations}',
+            PresentationVariantQualifier: 'vh_Orders_storageLocation',
+            Parameters                  : [
+                {
+                    $Type            : 'Common.ValueListParameterInOut',
+                    ValueListProperty: 'plant',
+                    LocalDataProperty: 'plant_plant'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterInOut',
+                    ValueListProperty: 'storageLocation',
+                    LocalDataProperty: 'storageLocation_storageLocation'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'descr'
+                }
+            ]
+        },
+        Common.ValueListWithFixedValues: false
+    );
+};
+
+
+annotate AdminService.OrderItems with @(
+    UI.PresentationVariant #vh_Orders_plant          : {
+        $Type    : 'UI.PresentationVariantType',
+        SortOrder: [{
+            $Type     : 'Common.SortOrderType',
+            Property  : plant_plant,
+            Descending: false,
+        }, ],
+    },
+    UI.PresentationVariant #vh_Orders_storageLocation: {
+        $Type    : 'UI.PresentationVariantType',
+        SortOrder: [{
+            $Type     : 'Common.SortOrderType',
+            Property  : storageLocation_storageLocation,
+            Descending: false,
+        }, ],
+    }
+);
