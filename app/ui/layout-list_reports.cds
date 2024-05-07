@@ -210,6 +210,67 @@ annotate AdminService.OrderItems with @(
     }}
 );
 
+
+annotate AdminService.Accounts with @(UI: {
+    HeaderInfo         : {
+        TypeName      : '{i18n>AccountTitle}',
+        TypeNamePlural: '{i18n>AccountInfo}',
+    },
+    PresentationVariant: {
+        $Type    : 'UI.PresentationVariantType',
+        SortOrder: [{
+            $Type     : 'Common.SortOrderType',
+            Property  : accountAssgmtNo,
+            Descending: false
+        }]
+    },
+    LineItem           : [
+        {
+            $Type             : 'UI.DataField',
+            Value             : accountAssgmtNo,
+            @UI.Importance    : #High,
+            @HTML5.CssDefaults: {width: '12em'}
+        },
+        {
+            $Type             : 'UI.DataField',
+            Value             : accountAssignmentCategory,
+            @UI.Importance    : #High,
+            @HTML5.CssDefaults: {width: '6em'}
+        },
+        {
+            $Type             : 'UI.DataField',
+            Value             : unloadingPoint,
+            @UI.Importance    : #High,
+            @HTML5.CssDefaults: {width: '10em'}
+        },
+        {
+            $Type             : 'UI.DataField',
+            Value             : goodsRecipient,
+            @UI.Importance    : #High,
+            @HTML5.CssDefaults: {width: '12em'}
+        },
+        {
+            $Type             : 'UI.DataField',
+            Value             : GLAccountNo,
+            @UI.Importance    : #High,
+            @HTML5.CssDefaults: {width: '15em'}
+        },
+        {
+            $Type             : 'UI.DataField',
+            Value             : costCenter,
+            @UI.Importance    : #High,
+            @HTML5.CssDefaults: {width: '15em'}
+        },
+        {
+            $Type             : 'UI.DataField',
+            Value             : functionalArea,
+            @UI.Importance    : #High,
+            @HTML5.CssDefaults: {width: '20em'}
+        },
+    ]
+});
+
+
 annotate AdminService.Attachments with @(
     UI    : {
         HeaderInfo         : {

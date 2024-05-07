@@ -143,3 +143,58 @@ annotate AdminService.Orders with @(
         ]
     }
 );
+
+annotate AdminService.OrderItems with @(
+    UI.HeaderInfo            : {
+        TypeName    : '{i18n>ItemTitle}',
+        Title       : {Value: parent.orderNo},
+        TypeImageUrl: 'sap-icon://accelerated'
+    },
+    UI.HeaderFacets          : [{
+        $Type : 'UI.ReferenceFacet',
+        Target: '@UI.FieldGroup#Basic_info'
+    }, ],
+    UI.FieldGroup #Basic_info: {
+        $Type: 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type               : 'UI.DataField',
+                Value               : orderItemNo,
+                @Common.FieldControl: #ReadOnly
+            },
+            {
+                $Type               : 'UI.DataField',
+                Value               : materialNo,
+                @Common.FieldControl: #ReadOnly
+            },
+            {
+                $Type               : 'UI.DataField',
+                Value               : materialDescr,
+                @Common.FieldControl: #ReadOnly
+            },
+            {
+                $Type               : 'UI.DataField',
+                Value               : stock,
+                @Common.FieldControl: #ReadOnly,
+                Criticality         : stockIcon
+            },
+            {
+                $Type               : 'UI.DataField',
+                Value               : netPrice,
+                @Common.FieldControl: #ReadOnly
+            }
+        ]
+    },
+    UI.Facets                : [
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : '{i18n>Account}',
+            Target: 'accounts/@UI.LineItem'
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : '{i18n>Attachments}',
+            Target: 'attachments/@UI.LineItem'
+        },
+    ]
+);

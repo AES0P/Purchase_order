@@ -69,6 +69,11 @@
                     "pattern": "Orders({key}):?query:",
                     "name": "OrderDetails",
                     "target": "OrderDetails"
+                },
+                {
+                    "pattern": "Orders({key})/items({key2}):?query:",
+                    "name": "Orders_itemsObjectPage",
+                    "target": "Orders_itemsObjectPage"
                 }
             ],
             "targets": {
@@ -131,6 +136,39 @@
                                         "creationMode": {
                                             "createAtEnd": true,
                                             "name": "Inline"
+                                        }
+                                    }
+                                },
+                                "attachments/@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "tableSettings": {
+                                        "type": "GridTable",
+                                        "creationMode": {
+                                            "createAtEnd": true,
+                                            "name": "Inline",
+                                            "inlineCreationRowsHiddenInEditMode": true
+                                        },
+                                        "selectAll": true,
+                                        "selectionMode": "Multi"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "Orders_itemsObjectPage": {
+                    "type": "Component",
+                    "id": "Orders_itemsObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "contextPath": "/Orders/items",
+                            "navigation": {},
+                            "controlConfiguration": {
+                                "accounts/@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "tableSettings": {
+                                        "type": "GridTable",
+                                        "creationMode": {
+                                            "createAtEnd": true
                                         }
                                     }
                                 },

@@ -33,6 +33,16 @@ annotate AdminService.OrderItems with @title: '{i18n>OrderItems}' {
     text                      @Common.Label : '{i18n>Text}';
 };
 
+annotate AdminService.Accounts with @title : '{i18n>AccountItems}' {
+    accountAssgmtNo           @Common.Label: '{i18n>AccountAssgmtNo}';
+    accountAssignmentCategory @Common.Label: '{i18n>AccountAssignmentCategory}';
+    unloadingPoint            @Common.Label: '{i18n>UnloadingPoint}';
+    goodsRecipient            @Common.Label: '{i18n>GoodsRecipient}';
+    GLAccountNo               @Common.Label: '{i18n>GLAccountNo}';
+    costCenter                @Common.Label: '{i18n>CostCenter}';
+    functionalArea            @Common.Label: '{i18n>FunctionalArea}';
+};
+
 annotate AdminService.status with {
     code  @Common.Text: name  @Common.TextArrangement: #TextOnly;
 }
